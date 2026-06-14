@@ -75,22 +75,34 @@ const Index = () => {
 
       {/* HERO */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
-        <img src={LEADER_IMG} alt="Наставник общины" className="absolute inset-0 w-full h-full object-cover object-[75%_18%] md:object-[78%_20%] animate-slow-zoom" />
-        {/* warm darkening overlays */}
-        <div className="absolute inset-0 bg-ink/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-transparent md:via-ink/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,transparent_0%,hsl(28_18%_7%/0.55)_100%)]" />
 
-        <div className="container relative z-10 pt-40 pb-24">
-          <div className="max-w-2xl">
+        {/* Right-anchored cinematic portrait — лицо в правой трети */}
+        <div className="absolute inset-0 flex justify-end">
+          <div className="relative w-full md:w-[65%] h-full overflow-hidden">
+            <img
+              src={LEADER_IMG}
+              alt="Наставник общины"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_12%] animate-slow-zoom"
+            />
+            {/* edge fade слева на portrait-панели — создаёт плавный переход к тексту */}
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
+          </div>
+        </div>
+
+        {/* базовые оверлеи поверх всего */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-ink/40" />
+        {/* тёплый amber-оттенок — sacred atmosphere */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,hsl(38_40%_14%/0.55),transparent)]" />
+
+        <div className="container relative z-10 pt-40 pb-28">
+          <div className="max-w-xl">
             <p className="reveal text-gold uppercase tracking-luxury text-xs mb-8" style={{ animationDelay: '0.1s' }}>
               Традиция Ifá · Òrìṣà
             </p>
-            <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-500" style={{ animationDelay: '0.25s' }}>
+            <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
               Школа африканских<br />традиций и магии
             </h1>
-            <p className="reveal text-ivory/75 text-lg md:text-xl mt-8 max-w-xl leading-relaxed" style={{ animationDelay: '0.45s' }}>
+            <p className="reveal text-ivory/72 text-lg md:text-xl mt-8 leading-relaxed" style={{ animationDelay: '0.45s' }}>
               Духовный путь, обучение, консультации и жизнь общины — для тех, кто ищет глубину, силу и дисциплину.
             </p>
             <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
@@ -104,6 +116,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/40 animate-bounce z-10">
           <Icon name="ChevronDown" size={24} />
         </div>
