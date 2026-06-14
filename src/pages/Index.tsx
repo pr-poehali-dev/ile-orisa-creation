@@ -175,14 +175,7 @@ const Index = () => {
             <p className="text-ivory/50 leading-[1.85] mb-12">
               Дорогу к Ifá не ищут торопливо. Она открывается тем, кто готов слушать, учиться и идти — шаг за шагом, согласно своему предназначению.
             </p>
-            <div className="flex gap-12">
-              {[['25+', 'лет в традиции'], ['∞', 'линия передачи'], ['1', 'дом, одна семья']].map(([num, t]) => (
-                <div key={t}>
-                  <div className="font-serif text-3xl text-ivory/90">{num}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-ivory/35 mt-2 max-w-[90px]">{t}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
 
         </div>
