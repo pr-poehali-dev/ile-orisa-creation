@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1781472051786063201.html"
 	],
 	prefix: "",
 	theme: {
@@ -18,7 +19,16 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['"Cormorant Garamond"', 'serif'],
+				sans: ['"Golos Text"', 'sans-serif'],
+			},
 			colors: {
+				ink: 'hsl(var(--ink))',
+				ivory: 'hsl(var(--ivory))',
+				gold: 'hsl(var(--gold))',
+				bronze: 'hsl(var(--bronze))',
+				earth: 'hsl(var(--earth))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -70,25 +80,27 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(28px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slow-zoom': {
+					'0%': { transform: 'scale(1)' },
+					'100%': { transform: 'scale(1.12)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fade-up 0.9s cubic-bezier(0.16,1,0.3,1) forwards',
+				'slow-zoom': 'slow-zoom 18s ease-out forwards'
 			}
 		}
 	},

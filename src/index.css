@@ -4,8 +4,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --ink: 28 18% 7%;
+    --ivory: 38 36% 94%;
+    --gold: 38 48% 58%;
+    --bronze: 28 38% 44%;
+    --earth: 26 22% 18%;
+
+    --background: 38 36% 94%;
+    --foreground: 28 18% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -96,6 +102,24 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .grain {
+    background-image: radial-gradient(
+      hsl(38 48% 58% / 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
+  }
+  .tracking-luxury {
+    letter-spacing: 0.32em;
   }
 }
