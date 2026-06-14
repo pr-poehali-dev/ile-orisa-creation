@@ -123,19 +123,32 @@ const Index = () => {
       </section>
 
       {/* TRUST / LEADER */}
-      <section className="relative bg-ink text-ivory py-28 grain">
-        <div className="container grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <img src={LEADER_IMG} alt="Наставник дома" className="w-full aspect-[4/5] object-cover object-[72%_15%]" />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/40 hidden md:block" />
+      <section className="relative bg-ink text-ivory py-28 grain overflow-hidden">
+        <div className="container grid md:grid-cols-2 gap-16 items-end">
+
+          {/* Full-body portrait */}
+          <div className="relative flex justify-center md:justify-start">
+            <div className="relative w-full max-w-[420px]">
+              <img
+                src="https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/bucket/15d61266-4ca3-4e3c-b27e-db812d364a70.jpg"
+                alt="Наставник дома — полный рост"
+                className="w-full aspect-[3/4] object-cover object-[50%_8%]"
+              />
+              {/* subtle warm vignette at bottom */}
+              <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-ink/60 to-transparent pointer-events-none" />
+              {/* gold corner accent */}
+              <div className="absolute -bottom-5 -right-5 w-28 h-28 border border-gold/35 hidden md:block" />
+            </div>
           </div>
-          <div>
+
+          {/* Text */}
+          <div className="md:pb-12">
             <p className="text-gold uppercase tracking-luxury text-xs mb-6">Хранитель традиции</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-8">Отец дома и духовный проводник</h2>
             <p className="text-ivory/70 text-lg leading-relaxed mb-6">
-              Наставник общины — носитель живой линии передачи Ifá. Его путь — это десятилетия дисциплины, посвящений и служения тем, кто приходит за ответом и силой.
+              Наставник общины — носитель живой линии передачи Ifá. Его путь — это годы дисциплины, посвящений и служения тем, кто приходит за ответом и силой.
             </p>
-            <p className="text-ivory/60 leading-relaxed mb-10">
+            <p className="text-ivory/55 leading-relaxed mb-10">
               Здесь нет обещаний чудес. Есть знание, ритуал и честная работа над собой — то, что веками держит традицию живой.
             </p>
             <div className="flex gap-10">
@@ -147,6 +160,7 @@ const Index = () => {
               ))}
             </div>
           </div>
+
         </div>
       </section>
 
