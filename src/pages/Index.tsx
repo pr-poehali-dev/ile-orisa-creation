@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 
-const LEADER_IMG = 'https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/files/16c25201-cd69-4ff2-89e0-191a450196ce.jpg';
+const LEADER_IMG = 'https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/bucket/b516aca0-6077-4214-8edc-27a12738497d.jpg';
 const ALTAR_IMG = 'https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/files/8eab9b92-14e3-453c-bb54-000958ecbaf3.jpg';
 const WOOD_IMG = 'https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/files/3ad7cfd8-cbad-4383-bfc3-e09a3d7c8a0e.jpg';
 
@@ -74,19 +74,23 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-end overflow-hidden bg-ink">
-        <img src={LEADER_IMG} alt="Лидер общины" className="absolute inset-0 w-full h-full object-cover object-center opacity-70 animate-slow-zoom" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 to-transparent" />
-        <div className="container relative z-10 pb-24 pt-40">
-          <div className="max-w-3xl">
+      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
+        <img src={LEADER_IMG} alt="Наставник общины" className="absolute inset-0 w-full h-full object-cover object-[75%_18%] md:object-[78%_20%] animate-slow-zoom" />
+        {/* warm darkening overlays */}
+        <div className="absolute inset-0 bg-ink/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-transparent md:via-ink/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,transparent_0%,hsl(28_18%_7%/0.55)_100%)]" />
+
+        <div className="container relative z-10 pt-40 pb-24">
+          <div className="max-w-2xl">
             <p className="reveal text-gold uppercase tracking-luxury text-xs mb-8" style={{ animationDelay: '0.1s' }}>
               Традиция Ifá · Òrìṣà
             </p>
             <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-500" style={{ animationDelay: '0.25s' }}>
               Школа африканских<br />традиций и магии
             </h1>
-            <p className="reveal text-ivory/70 text-lg md:text-xl mt-8 max-w-2xl leading-relaxed" style={{ animationDelay: '0.45s' }}>
+            <p className="reveal text-ivory/75 text-lg md:text-xl mt-8 max-w-xl leading-relaxed" style={{ animationDelay: '0.45s' }}>
               Духовный путь, обучение, консультации и жизнь общины — для тех, кто ищет глубину, силу и дисциплину.
             </p>
             <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
@@ -100,7 +104,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/40 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/40 animate-bounce z-10">
           <Icon name="ChevronDown" size={24} />
         </div>
       </section>
@@ -109,7 +113,7 @@ const Index = () => {
       <section className="relative bg-ink text-ivory py-28 grain">
         <div className="container grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <img src={LEADER_IMG} alt="Наставник дома" className="w-full aspect-[4/5] object-cover" />
+            <img src={LEADER_IMG} alt="Наставник дома" className="w-full aspect-[4/5] object-cover object-[72%_15%]" />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/40 hidden md:block" />
           </div>
           <div>
