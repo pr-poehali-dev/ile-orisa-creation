@@ -47,6 +47,7 @@ export default function Layout({ children, darkHeader = false }: LayoutProps) {
           {/* Brand */}
           <Link to="/" className="flex flex-col leading-none shrink-0">
             <span className="font-serif text-xl md:text-2xl text-ivory tracking-wide">İLE ORISA IFAGBAYE</span>
+            <span className="text-[9px] uppercase tracking-luxury text-ivory/40 mt-0.5">Школа африканских традиций и магии</span>
           </Link>
 
           {/* Desktop nav */}
@@ -103,7 +104,8 @@ export default function Layout({ children, darkHeader = false }: LayoutProps) {
       <footer className="bg-ink border-t border-ivory/8">
         <div className="container py-16 grid md:grid-cols-3 gap-12 items-start">
           <div>
-            <div className="font-serif text-ivory text-xl tracking-wide mb-6">İLE ORISA IFAGBAYE</div>
+            <div className="font-serif text-ivory text-xl tracking-wide mb-3">İLE ORISA IFAGBAYE</div>
+            <div className="text-[9px] uppercase tracking-luxury text-ivory/30 mb-6">Школа африканских традиций и магии</div>
             <p className="text-ivory/35 text-sm leading-relaxed max-w-[220px]">
               Дом традиции Ifá и Òrìṣà. Знание, дисциплина, духовный путь.
             </p>
