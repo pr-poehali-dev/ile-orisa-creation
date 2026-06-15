@@ -84,8 +84,8 @@ const Index = () => {
             <img
               src={LEADER_IMG}
               alt="Наставник общины"
-              className="absolute inset-0 w-full h-full object-cover object-[65%_0%] animate-slow-zoom scale-110"
-              style={{ filter: 'brightness(0.82) contrast(1.04) saturate(0.92)' }}
+              className="absolute inset-0 w-full h-full object-cover object-[65%_-25%] animate-slow-zoom scale-110"
+              style={{ filter: 'brightness(0.95) contrast(1.04) saturate(0.92)' }}
             />
             {/* warm amber sacred atmosphere — lighter than before */}
             <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
