@@ -76,48 +76,79 @@ const Index = () => {
       </header>
 
       {/* ─── HERO ──────────────────────────────────────────────── */}
-      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
+      <section id="hero" className="relative bg-ink overflow-hidden">
 
-        {/* Leader figure — right side */}
-        <div className="absolute inset-0 flex justify-end">
-          <div className="relative w-full md:w-[78%] h-full overflow-hidden">
-            <img
-              src={LEADER_IMG}
-              alt="Наставник общины"
-              className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
-              style={{ objectPosition: '65% 8%', filter: 'brightness(0.80) contrast(1.04) saturate(0.90)' }}
-            />
-            <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/65 to-transparent" />
+        {/* DESKTOP: full-screen with figure on the right */}
+        <div className="hidden md:flex relative min-h-screen items-center">
+          <div className="absolute inset-0 flex justify-end">
+            <div className="relative w-[78%] h-full overflow-hidden">
+              <img
+                src={LEADER_IMG}
+                alt="Наставник общины"
+                className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+                style={{ objectPosition: '65% 8%', filter: 'brightness(0.80) contrast(1.04) saturate(0.90)' }}
+              />
+              <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/65 to-transparent" />
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/25" />
+          <div className="container relative z-10 pt-44 pb-32">
+            <div className="max-w-xl">
+              <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
+                Школа африканских<br />традиций и магии
+              </h1>
+              <p className="reveal text-ivory/90 text-xl md:text-2xl mt-10 leading-[1.75] max-w-md font-light" style={{ animationDelay: '0.45s' }}>
+                Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
+              </p>
+              <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
+                <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-8 py-4 text-sm uppercase tracking-wider hover:bg-ivory transition-colors duration-300">
+                  Начать знакомство
+                  <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="#contacts" className="inline-flex items-center justify-center gap-3 border border-ivory/30 text-ivory px-8 py-4 text-sm uppercase tracking-wider hover:border-ivory/60 hover:text-ivory transition-colors duration-300">
+                  Записаться на консультацию
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/35 animate-bounce z-10">
+            <Icon name="ChevronDown" size={24} />
           </div>
         </div>
 
-        {/* cinematic overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/25" />
-
-        <div className="container relative z-10 pt-44 pb-32">
-          <div className="max-w-xl">
-            <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
+        {/* MOBILE: text block → then figure below */}
+        <div className="md:hidden flex flex-col">
+          {/* text */}
+          <div className="relative z-10 px-6 pt-36 pb-12 bg-ink">
+            <h1 className="reveal font-serif text-ivory text-4xl leading-[1.08]" style={{ animationDelay: '0.25s' }}>
               Школа африканских<br />традиций и магии
             </h1>
-            <p className="reveal text-ivory/90 text-xl md:text-2xl mt-10 leading-[1.75] max-w-md font-light" style={{ animationDelay: '0.45s' }}>
+            <p className="reveal text-ivory/90 text-lg mt-8 leading-[1.75] font-light" style={{ animationDelay: '0.45s' }}>
               Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
             </p>
-            <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
-              <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-8 py-4 text-sm uppercase tracking-wider hover:bg-ivory transition-colors duration-300">
+            <div className="reveal flex flex-col gap-3 mt-10" style={{ animationDelay: '0.65s' }}>
+              <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-6 py-4 text-sm uppercase tracking-wider">
                 Начать знакомство
-                <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
+                <Icon name="ArrowRight" size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#contacts" className="inline-flex items-center justify-center gap-3 border border-ivory/30 text-ivory px-8 py-4 text-sm uppercase tracking-wider hover:border-ivory/60 hover:text-ivory transition-colors duration-300">
+              <a href="#contacts" className="inline-flex items-center justify-center gap-3 border border-ivory/30 text-ivory px-6 py-4 text-sm uppercase tracking-wider">
                 Записаться на консультацию
               </a>
             </div>
           </div>
+          {/* figure */}
+          <div className="relative w-full aspect-[3/4] overflow-hidden">
+            <img
+              src={LEADER_IMG}
+              alt="Наставник общины"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: '65% 8%', filter: 'brightness(0.82) contrast(1.04) saturate(0.90)' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
+          </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/35 animate-bounce z-10">
-          <Icon name="ChevronDown" size={24} />
-        </div>
       </section>
 
       {/* ─── LEADER ────────────────────────────────────────────── */}
