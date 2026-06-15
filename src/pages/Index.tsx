@@ -102,12 +102,11 @@ const Index = () => {
                 Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
               </p>
               <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
-                <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-8 py-4 text-sm uppercase tracking-wider hover:bg-ivory transition-colors duration-300">
-                  Начать знакомство
-                  <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a href="#contacts" className="inline-flex items-center justify-center gap-3 border border-ivory/30 text-ivory px-8 py-4 text-sm uppercase tracking-wider hover:border-ivory/60 hover:text-ivory transition-colors duration-300">
+                <a href="#contacts" className="inline-flex items-center justify-center bg-gold text-ink px-8 py-4 text-sm uppercase tracking-wider hover:bg-ivory transition-colors duration-300">
                   Записаться на консультацию
+                </a>
+                <a href="#help" className="inline-flex items-center justify-center border border-ivory/30 text-ivory px-8 py-4 text-sm uppercase tracking-wider hover:border-ivory/60 transition-colors duration-300">
+                  Обучение
                 </a>
               </div>
             </div>
@@ -128,12 +127,11 @@ const Index = () => {
               Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
             </p>
             <div className="reveal flex flex-col gap-3 mt-10" style={{ animationDelay: '0.65s' }}>
-              <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-6 py-4 text-sm uppercase tracking-wider">
-                Начать знакомство
-                <Icon name="ArrowRight" size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#contacts" className="inline-flex items-center justify-center gap-3 border border-ivory/30 text-ivory px-6 py-4 text-sm uppercase tracking-wider">
+              <a href="#contacts" className="inline-flex items-center justify-center bg-gold text-ink px-6 py-4 text-sm uppercase tracking-wider">
                 Записаться на консультацию
+              </a>
+              <a href="#help" className="inline-flex items-center justify-center border border-ivory/30 text-ivory px-6 py-4 text-sm uppercase tracking-wider">
+                Обучение
               </a>
             </div>
           </div>
