@@ -109,8 +109,7 @@
 
 @layer utilities {
   .reveal {
-    opacity: 0;
-    animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   .grain {
     background-image: radial-gradient(
