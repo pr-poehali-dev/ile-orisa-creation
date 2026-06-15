@@ -145,7 +145,6 @@ const Index = () => {
           </div>
 
           <div className="md:pb-12">
-            <p className="text-ivory/38 uppercase tracking-luxury text-[10px] mb-7">Хранитель традиции</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-10">Хранитель традиции<br />и наставник общины</h2>
 
             <p className="text-ivory/80 text-lg leading-[1.9] mb-7">
