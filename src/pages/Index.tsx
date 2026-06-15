@@ -139,7 +139,7 @@ const Index = () => {
                 className="w-full aspect-[3/4] object-cover object-[50%_8%]"
               />
               <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-ink/60 to-transparent pointer-events-none" />
-              <div className="absolute -bottom-5 -right-5 w-28 h-28 border border-ivory/15 hidden md:block" />
+
             </div>
           </div>
 
