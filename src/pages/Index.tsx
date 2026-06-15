@@ -78,38 +78,30 @@ const Index = () => {
       {/* ─── HERO ──────────────────────────────────────────────── */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
 
-        {/* Full-body leader — 80% width, brighter for better presence */}
-        <div className="absolute inset-0 flex justify-end">
-          <div className="relative w-full md:w-[80%] h-full overflow-hidden">
-            <img
-              src={LEADER_IMG}
-              alt="Наставник общины"
-              className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
-              style={{ objectPosition: '65% 5%', filter: 'brightness(0.82) contrast(1.04) saturate(0.92)' }}
-            />
-            {/* warm amber sacred atmosphere — lighter than before */}
-            <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
-            {/* left gradient — text zone */}
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
-          </div>
+        {/* Sacred atmospheric background — no figure */}
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/files/23e9c0c5-0727-4241-8d29-7d4a1d363513.jpg"
+            alt=""
+            className="w-full h-full object-cover animate-slow-zoom"
+            style={{ filter: 'brightness(0.55) contrast(1.08) saturate(0.75)' }}
+          />
         </div>
 
-        {/* cinematic overlays — slightly lighter for better visibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/28" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_72%_38%,hsl(38_30%_10%/0.38),transparent)]" />
+        {/* cinematic overlays — sacred depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/92 via-ink/30 to-ink/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-ink/40" />
+        {/* warm amber sacred glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_65%_45%,hsl(32_40%_12%/0.6),transparent)]" />
 
         <div className="container relative z-10 pt-44 pb-32">
           <div className="max-w-xl">
-
             <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
               Школа африканских<br />традиций и магии
             </h1>
-
-            {/* Subtitle — более крупный, высококонтрастный */}
             <p className="reveal text-ivory/90 text-xl md:text-2xl mt-10 leading-[1.75] max-w-md font-light" style={{ animationDelay: '0.45s' }}>
               Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
             </p>
-
             <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
               <a href="#tradition" className="group inline-flex items-center justify-center gap-3 bg-gold text-ink px-8 py-4 text-sm uppercase tracking-wider hover:bg-ivory transition-colors duration-300">
                 Начать знакомство
@@ -128,35 +120,43 @@ const Index = () => {
       </section>
 
       {/* ─── LEADER ────────────────────────────────────────────── */}
-      <section className="relative bg-ink text-ivory py-28 grain overflow-hidden">
-        <div className="container grid md:grid-cols-2 gap-16 items-end">
+      <section className="relative bg-ink text-ivory overflow-hidden">
+        <div className="absolute inset-0 grain opacity-50 pointer-events-none" />
 
-          <div className="relative flex justify-center md:justify-start">
-            <div className="relative w-full max-w-[420px]">
-              <img
-                src={LEADER_FULLBODY}
-                alt="Наставник дома — полный рост"
-                className="w-full aspect-[3/4] object-cover object-[50%_8%]"
-              />
-              <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-ink/60 to-transparent pointer-events-none" />
+        <div className="container relative z-10">
+          <div className="grid md:grid-cols-2 gap-0 md:gap-0 items-stretch min-h-[85vh]">
 
+            {/* Portrait — full height, edge-to-edge on left */}
+            <div className="relative order-2 md:order-1 md:min-h-full">
+              <div className="md:absolute md:inset-0 aspect-[3/4] md:aspect-auto overflow-hidden">
+                <img
+                  src={LEADER_FULLBODY}
+                  alt="Хранитель традиции"
+                  className="w-full h-full object-cover object-[50%_5%]"
+                  style={{ filter: 'brightness(0.88) contrast(1.03) saturate(0.9)' }}
+                />
+                {/* bottom fade */}
+                <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-ink/80 to-transparent pointer-events-none" />
+                {/* right fade into text */}
+                <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-ink to-transparent pointer-events-none hidden md:block" />
+              </div>
             </div>
+
+            {/* Text — vertically centred */}
+            <div className="order-1 md:order-2 flex flex-col justify-center py-20 md:py-28 md:pl-16 lg:pl-20">
+              <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-10">Хранитель традиции<br />и наставник общины</h2>
+              <p className="text-ivory/80 text-lg leading-[1.9] mb-7">
+                Наш наставник — носитель живой традиции Ifá и линии преемственности, передаваемой от учителя к ученику.
+              </p>
+              <p className="text-ivory text-base leading-[1.9] mb-7">
+                Путь Ifá — это не только знание, но и ответственность, духовная практика, уважение к традиции и постоянное обучение. Настоящая передача рождается не в книгах, а в опыте, наставничестве и живом прикосновении к традиции.
+              </p>
+              <p className="text-ivory text-base leading-[1.9]">
+                В İLE ORISA IFAGBAYE мы стремимся сохранять уважение к традиции, поддерживать путь обучения и быть опорой для тех, кто ищет силу, поддержку и духовный путь.
+              </p>
+            </div>
+
           </div>
-
-          <div className="md:pb-12">
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-10">Хранитель традиции<br />и наставник общины</h2>
-
-            <p className="text-ivory/80 text-lg leading-[1.9] mb-7">
-              Наш наставник — носитель живой традиции Ifá и линии преемственности, передаваемой от учителя к ученику.
-            </p>
-            <p className="text-ivory text-base leading-[1.9] mb-7">
-              Путь Ifá — это не только знание, но и ответственность, духовная практика, уважение к традиции и постоянное обучение. Настоящая передача рождается не в книгах, а в опыте, наставничестве и живом прикосновении к традиции.
-            </p>
-            <p className="text-ivory text-base leading-[1.9]">
-              В İLE ORISA IFAGBAYE мы стремимся сохранять уважение к традиции, поддерживать путь обучения и быть опорой для тех, кто ищет силу, поддержку и духовный путь.
-            </p>
-          </div>
-
         </div>
       </section>
 
