@@ -99,9 +99,7 @@ const Index = () => {
 
         <div className="container relative z-10 pt-44 pb-32">
           <div className="max-w-xl">
-            <p className="reveal text-gold/90 uppercase tracking-luxury text-xs mb-9" style={{ animationDelay: '0.1s' }}>
-              Традиция Ifá · Òrìṣà
-            </p>
+
             <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
               Школа африканских<br />традиций и магии
             </h1>
