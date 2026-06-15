@@ -78,21 +78,22 @@ const Index = () => {
       {/* ─── HERO ──────────────────────────────────────────────── */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
 
-        {/* Sacred atmospheric background — no figure */}
-        <div className="absolute inset-0">
-          <img
-            src="https://cdn.poehali.dev/projects/a467827a-a378-4bc9-965e-6991faea4d98/files/23e9c0c5-0727-4241-8d29-7d4a1d363513.jpg"
-            alt=""
-            className="w-full h-full object-cover animate-slow-zoom"
-            style={{ filter: 'brightness(0.55) contrast(1.08) saturate(0.75)' }}
-          />
+        {/* Leader figure — right side */}
+        <div className="absolute inset-0 flex justify-end">
+          <div className="relative w-full md:w-[78%] h-full overflow-hidden">
+            <img
+              src={LEADER_IMG}
+              alt="Наставник общины"
+              className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+              style={{ objectPosition: '65% 8%', filter: 'brightness(0.80) contrast(1.04) saturate(0.90)' }}
+            />
+            <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/65 to-transparent" />
+          </div>
         </div>
 
-        {/* cinematic overlays — sacred depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/92 via-ink/30 to-ink/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-ink/40" />
-        {/* warm amber sacred glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_65%_45%,hsl(32_40%_12%/0.6),transparent)]" />
+        {/* cinematic overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/25" />
 
         <div className="container relative z-10 pt-44 pb-32">
           <div className="max-w-xl">
