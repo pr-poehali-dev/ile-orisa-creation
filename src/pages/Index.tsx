@@ -145,29 +145,18 @@ const Index = () => {
           </div>
 
           <div className="md:pb-12">
-            <p className="text-ivory/40 uppercase tracking-luxury text-[10px] mb-6">Хранитель традиции</p>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-8">Хранитель традиции<br />и наставник общины</h2>
-            <p className="text-ivory/70 text-lg leading-relaxed mb-6">
-              Наставник общины — носитель живой линии передачи Ifá. Его путь — это дисциплина, посвящения и служение тем, кто приходит за знанием, поддержкой и силой.
-            </p>
-            <p className="text-ivory/50 leading-relaxed mb-10">
-              Традиция Ifá живёт там, где есть уважение к знанию, честный путь обучения и подлинная передача от наставника к ученику.
-            </p>
+            <p className="text-ivory/38 uppercase tracking-luxury text-[10px] mb-7">Хранитель традиции</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-10">Хранитель традиции<br />и наставник общины</h2>
 
-            {/* Authentic trust pillars — no fake numbers */}
-            <div className="grid grid-cols-2 gap-4 border-t border-ivory/10 pt-8">
-              {[
-                ['Живая традиция', 'Прямая линия передачи Ifá'],
-                ['Духовное сопровождение', 'Личная работа с наставником'],
-                ['Путь знания', 'Обучение, ритуал, дисциплина'],
-                ['Общинный путь', 'Братство и поддержка дома'],
-              ].map(([title, desc]) => (
-                <div key={title} className="py-4 pr-4">
-                  <div className="font-serif text-base text-ivory mb-1">{title}</div>
-                  <div className="text-[11px] text-ivory/35 leading-relaxed tracking-wide">{desc}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-ivory/80 text-lg leading-[1.9] mb-7">
+              Наш наставник — носитель живой традиции Ifá и линии преемственности, передаваемой от учителя к ученику.
+            </p>
+            <p className="text-ivory/58 text-base leading-[1.9] mb-7">
+              Путь Ifá — это не только знание, но и ответственность, духовная практика, уважение к традиции и постоянное обучение. Настоящая передача рождается не в книгах, а в опыте, наставничестве и живом прикосновении к традиции.
+            </p>
+            <p className="text-ivory/45 text-base leading-[1.9]">
+              В İLE ORISA IFAGBAYE мы стремимся сохранять уважение к традиции, поддерживать путь обучения и быть опорой для тех, кто ищет силу, поддержку и духовный путь.
+            </p>
           </div>
 
         </div>
