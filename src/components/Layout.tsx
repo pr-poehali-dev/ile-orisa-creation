@@ -6,7 +6,7 @@ const NAV = [
   { label: 'Главная', href: '/' },
   { label: 'Традиция', href: '/tradiciya' },
   { label: 'Община', href: '/obshina' },
-  { label: 'Обучение', href: '/#help' },
+  { label: 'Обучение', href: '/obuchenie' },
   { label: 'Знания', href: '/znaniya' },
   { label: 'Контакты', href: '/#contacts' },
 ];
@@ -69,7 +69,7 @@ export default function Layout({ children, darkHeader = false }: LayoutProps) {
           {/* CTA + burger */}
           <div className="flex items-center gap-4">
             <Link
-              to="/#contacts"
+              to="/konsultaciya"
               className="hidden md:inline-flex items-center border border-ivory/30 text-ivory/80 hover:border-ivory/60 hover:text-ivory px-5 py-2.5 text-[11px] uppercase tracking-[0.14em] transition-colors duration-300"
             >
               Консультация
@@ -89,7 +89,7 @@ export default function Layout({ children, darkHeader = false }: LayoutProps) {
                 {n.label}
               </Link>
             ))}
-            <Link to="/#contacts" onClick={() => setOpen(false)}
+            <Link to="/konsultaciya" onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center border border-ivory/30 text-ivory/80 px-6 py-3 text-sm uppercase tracking-wider">
               Консультация
             </Link>
