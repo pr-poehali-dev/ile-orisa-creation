@@ -95,10 +95,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/25" />
           <div className="container relative z-10 pt-44 pb-32">
             <div className="max-w-xl">
-              <h1 className="reveal font-serif text-ivory text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05]" style={{ animationDelay: '0.25s' }}>
-                Школа африканских<br />традиций и магии
-              </h1>
-              <p className="reveal text-ivory/90 text-xl md:text-2xl mt-10 leading-[1.75] max-w-md font-light" style={{ animationDelay: '0.45s' }}>
+              <p className="reveal text-ivory/90 text-xl md:text-2xl mt-10 leading-[1.75] max-w-md font-light" style={{ animationDelay: '0.25s' }}>
                 Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
               </p>
               <div className="reveal flex flex-col sm:flex-row gap-4 mt-12" style={{ animationDelay: '0.65s' }}>
@@ -120,10 +117,7 @@ const Index = () => {
         <div className="md:hidden flex flex-col">
           {/* text */}
           <div className="relative z-10 px-6 pt-36 pb-12 bg-ink">
-            <h1 className="reveal font-serif text-ivory text-4xl leading-[1.08]" style={{ animationDelay: '0.25s' }}>
-              Школа африканских<br />традиций и магии
-            </h1>
-            <p className="reveal text-ivory/90 text-lg mt-8 leading-[1.75] font-light" style={{ animationDelay: '0.45s' }}>
+            <p className="reveal text-ivory/90 text-lg mt-8 leading-[1.75] font-light" style={{ animationDelay: '0.25s' }}>
               Для тех, кто ищет силу, поддержку и путь в традиции Ifá и Òrìṣà.
             </p>
             <div className="reveal flex flex-col gap-3 mt-10" style={{ animationDelay: '0.65s' }}>
