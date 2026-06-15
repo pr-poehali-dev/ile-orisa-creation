@@ -78,24 +78,25 @@ const Index = () => {
       {/* ─── HERO ──────────────────────────────────────────────── */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-ink">
 
-        {/* Full-body leader — slightly larger ~72% width for more presence */}
+        {/* Full-body leader — 80% width, brighter for better presence */}
         <div className="absolute inset-0 flex justify-end">
-          <div className="relative w-full md:w-[72%] h-full overflow-hidden">
+          <div className="relative w-full md:w-[80%] h-full overflow-hidden">
             <img
               src={LEADER_IMG}
               alt="Наставник общины"
-              className="absolute inset-0 w-full h-full object-cover object-[50%_8%] animate-slow-zoom"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_6%] animate-slow-zoom scale-110"
+              style={{ filter: 'brightness(0.82) contrast(1.04) saturate(0.92)' }}
             />
-            {/* warm amber sacred atmosphere */}
-            <div className="absolute inset-0 bg-[hsl(32_35%_8%/0.45)]" />
+            {/* warm amber sacred atmosphere — lighter than before */}
+            <div className="absolute inset-0 bg-[hsl(32_30%_8%/0.3)]" />
             {/* left gradient — text zone */}
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/65 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
           </div>
         </div>
 
-        {/* cinematic overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/88 via-ink/15 to-ink/35" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_72%_38%,hsl(38_35%_12%/0.5),transparent)]" />
+        {/* cinematic overlays — slightly lighter for better visibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/28" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_72%_38%,hsl(38_30%_10%/0.38),transparent)]" />
 
         <div className="container relative z-10 pt-44 pb-32">
           <div className="max-w-xl">
@@ -204,7 +205,7 @@ const Index = () => {
         <div className="container">
           <div className="max-w-2xl mb-16">
             <p className="text-bronze uppercase tracking-luxury text-xs mb-6">Путь в общине</p>
-            <h2 className="font-serif text-4xl md:text-6xl leading-tight text-ink">Постепенный путь уважения и дисциплины</h2>
+            <h2 className="font-serif text-4xl md:text-6xl leading-tight text-ink">Путь знакомства с традицией</h2>
           </div>
           <div className="space-y-px">
             {PATH.map((p) => (
@@ -224,7 +225,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-xl">
               <p className="text-ivory/40 uppercase tracking-luxury text-xs mb-6">Библиотека</p>
-              <h2 className="font-serif text-4xl md:text-6xl leading-tight">Материалы и статьи дома</h2>
+              <h2 className="font-serif text-4xl md:text-6xl leading-tight">Знания и материалы</h2>
             </div>
             <a href="#contacts" className="text-sm uppercase tracking-wider text-ivory/40 hover:text-ivory transition-colors inline-flex items-center gap-2">
               Все материалы <Icon name="ArrowRight" size={16} />
